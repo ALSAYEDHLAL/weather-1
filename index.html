@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Weather App</title>
+
+    <link rel="shortcut icon" href="./icons/cloud.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container my-5 pb-3">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <h3 class="text-primary text-center title">Get Weather Information.</h3>
+
+                    <div class="mb-3">
+                        <select name="countrylist" id="countrylist" class="form-select country" onchange="loadStates()">
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <select name="statelist" id="ststelist" class="form-select state" onchange="loadCities()">
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <select name="citylist" id="citylist" class="form-select city">
+                            <option value="">Select City</option>
+                        </select>
+                    </div>
+                </form>
+
+
+
+                <div class="d-flex justify-content-center align-items-center " id="weatherwidget">
+
+
+                    <div class="d-flex justify-content-between card-container">
+                        <div class="card card1">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    egypt
+                                </h5>
+                                <p>Friday, januray 2, 2023</p>
+                                <div class="mb-2" id="tempcard">
+                                    <h6 class="card-subtitle mb-2 cel">24</h6>
+                                    <p class="card-text"><b>Feels like:</b> 24.13 °C</p>
+                                    <p class="card-text"><b>Max Temp:</b> 24.13 °F</p>
+                                    <p class="card-text"><b>Min Temp:</b> 24.13 °F</p>
+                                    <div class="condition-img">Clean <img src="./icons/sky.png" class="mx-2 iconImg"
+                                            width="75" alt="">°C</div>
+                                    <p><b>Descrption:</b>Clear Sky</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card2">
+                            <div class="card-body">
+
+                                <p><b>Humidity:</b>40%
+                                    <span class="float-end units"><a href="#" class="unitlink active"
+                                            data-unit="cel">°C</a><a href="#" class="unitlink"
+                                            data-unit="far">°F</a></span>
+                                </p>
+
+
+                                <p><b>Pressure:</b>1100</p>
+                                <p><b>Wind-Speed:</b> 12 km/h</p>
+                                <p><b>See_leval:</b>1101</p>
+                                <p><b>Grnd_leval:</b>999</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="localweatherinfo d-flex justify-content-center flex-column">
+                        <h2 class="text-center">Device Location</h2>
+                        <h3 class="text-center">Weather Info</h3>
+                    </div> -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
